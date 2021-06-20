@@ -18,7 +18,7 @@ SeqDDG is a sequence-based protein single-point mutation effect predictor. SeqDD
 
 *Sequence-based predictor. N. A. for server not returned results.
 
-<img src="http://185.201.226.155/Precisions.png " alt="image-20210620111608854" style="zoom:50%;" />
+![image](http://185.201.226.155/Precisions.png)
 
 ## Contact
 
