@@ -8,7 +8,7 @@ SeqDDG is a sequence-based protein single-point mutation effect predictor. SeqDD
 
 | Algorithm     | Pearson’s r |
 | ------------- | :---------- |
-| **SeqDDG* **  | **0.56  **  |
+| **SeqDDG***   | **0.56**    |
 | PoPMuSiC      | 0.56        |
 | FoldX         | 0.51        |
 | EASE-MM*      | 0.45        |
