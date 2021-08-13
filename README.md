@@ -105,5 +105,5 @@ A_24_M
 
 ## Reference
 
-Sun J., Wu B.* SeqDDG: Sequence-based protein point mutation effect predictor. *Unpublished*. 2021.
+Sun J.,Cui YL, Wu B.* SeqDDG: Sequence-based protein point mutation effect predictor. *Unpublished*. 2021.
 
