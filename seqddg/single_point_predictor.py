@@ -21,7 +21,7 @@ mutation = args.mutation
 mutation_list = args.mutation_list
 
 outfilename = seqfilename.split(".")[0]+".predicted.txt"
-
+print("output at: "+outfilename)
 
 if a3mfilename == None:
     a3mfilename = HHsearch.hhsearch(seqfilename, iter_num, path_to_database, num_threads)
@@ -39,7 +39,7 @@ seq = feature_maker.getSeq(seqfilename)
 msa = feature_maker.get_MSA(a3mfilename)
 
 
-msaddg = load_model("New_14_model.h5", compile = False)
+msaddg = load_model("model/SeqDDG.h5", compile = False)
 msa_C = -0.5083466
 
 def run(wpm,msa,v_out,w_out,seq):
@@ -72,6 +72,7 @@ if __name__ == '__main__':
             if wpm[0] and wpm[2] in "ARNDCQEGHILKMFPSTWYV":
                 if seq[int(wpm[1])-1] == wpm[0]:
                     feature_list = run(wpm,msa,v_out,w_out,seq)
+                    print(line.strip()+"\t"+str(msaddg.predict(np.array([feature_list]))[0][0]-msa_C))
                     with open(outfilename,"a+") as of:
                         of.write(line.strip()+"\t"+str(msaddg.predict(np.array([feature_list]))[0][0]-msa_C)+"\n")
                         of.close()
